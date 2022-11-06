@@ -14,32 +14,6 @@ const data = {
     },
 
     {
-      name: 'Homdecor',
-      slug: 'handmade-decor',
-      category: 'decoration',
-      image: '/images/home-decor.jpg',
-      price: '200',
-      countInStock: '10',
-      brand: 'local',
-      rating: 4.5,
-      numReviews: 1,
-      descriptin: 'High quality decoration item',
-    },
-
-    {
-      name: 'Handmade teacup',
-      slug: 'handmade-teacup',
-      category: 'kitchen',
-      image: '/images/tea-cup.jpg',
-      price: 120,
-      countInStock: 15,
-      brand: 'local',
-      rating: 4.5,
-      numReviews: 10,
-      descriptin: 'High quality water jug',
-    },
-
-    {
       name: 'Handmade bag',
       slug: 'handmade-bag',
       category: 'bag',
@@ -50,6 +24,32 @@ const data = {
       rating: 4.5,
       numReviews: 12,
       descriptin: 'High quality handbag',
+    },
+
+    {
+      name: 'Handmade teacup',
+      slug: 'handmade-teacup',
+      category: 'kitchen',
+      image: '/images/tea-cup-set.jpg',
+      price: 120,
+      countInStock: 15,
+      brand: 'local',
+      rating: 4.5,
+      numReviews: 10,
+      descriptin: 'High quality water jug',
+    },
+
+    {
+      name: 'Homdecor',
+      slug: 'handmade-decor',
+      category: 'decoration',
+      image: '/images/home-decor.jpg',
+      price: '200',
+      countInStock: '10',
+      brand: 'local',
+      rating: 4.5,
+      numReviews: 1,
+      descriptin: 'High quality decoration item',
     },
   ],
 };

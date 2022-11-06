@@ -39,6 +39,7 @@ function HomeScreen() {
       //setProducts(result.data);
     };
     fetchData();
+    // eslint-disable-next-line
   }, []);
   return (
     <div>

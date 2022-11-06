@@ -1,21 +1,34 @@
 import './App.css';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomeScreen from './Screens/HomeScreen';
 import ProductScreen from './Screens/ProductScreen';
+import { Navbar, Container } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      <div className="d-flex flex-column site-container">
         <header>
-          <Link to="/">ECraft</Link>
+          <Navbar bg="dark" variant="dark">
+            <Container>
+              <LinkContainer to="/">
+                <Navbar.Brand>ECraft</Navbar.Brand>
+              </LinkContainer>
+            </Container>
+          </Navbar>
         </header>
         <main>
-          <Routes>
-            <Route path="/product/:slug" element={<ProductScreen />} />
-            <Route path="/" element={<HomeScreen />} />
-          </Routes>
+          <Container>
+            <Routes>
+              <Route path="/product/:slug" element={<ProductScreen />} />
+              <Route path="/" element={<HomeScreen />} />
+            </Routes>
+          </Container>
         </main>
+        <footer>
+          <div className = "text-center">All Rights Reserved© ECraft</div>
+        </footer>
       </div>
     </BrowserRouter>
   );

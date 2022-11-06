@@ -30,7 +30,7 @@ const data = {
       name: 'Handmade teacup',
       slug: 'handmade-teacup',
       category: 'kitchen',
-      image: '/images/tea-cup.jpg',
+      image: '/images/tea-cup-set.jpg',
       price: 120,
       countInStock: 15,
       brand: 'local',
