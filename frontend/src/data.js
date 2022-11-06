@@ -10,7 +10,7 @@ const data = {
       brand: 'local',
       rating: 4.5,
       numReviews: 1,
-      descriptin: 'High quality indoor lamp',
+      description: 'High quality indoor lamp',
     },
 
     {
@@ -23,7 +23,7 @@ const data = {
       brand: 'local',
       rating: 4.5,
       numReviews: 1,
-      descriptin: 'High quality decoration item',
+      description: 'High quality decoration item',
     },
 
     {
@@ -36,7 +36,7 @@ const data = {
       brand: 'local',
       rating: 4.5,
       numReviews: 10,
-      descriptin: 'High quality water jug',
+      description: 'High quality tea cup set',
     },
 
     {
@@ -49,7 +49,7 @@ const data = {
       brand: 'local',
       rating: 4.5,
       numReviews: 12,
-      descriptin: 'High quality handbag',
+      description: 'High quality handbag',
     },
   ],
 };
