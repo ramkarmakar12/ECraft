@@ -19,7 +19,7 @@ function App() {
           </Navbar>
         </header>
         <main>
-          <Container className='mt-3'>
+          <Container className="mt-3">
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/" element={<HomeScreen />} />
@@ -27,7 +27,7 @@ function App() {
           </Container>
         </main>
         <footer>
-          <div className = "text-center">All Rights Reserved© ECraft</div>
+          <div className="text-center">All Rights Reserved© ECraft</div>
         </footer>
       </div>
     </BrowserRouter>

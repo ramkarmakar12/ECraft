@@ -3,7 +3,10 @@ import { useEffect, useReducer } from 'react';
 import { Badge, Button, Card, Col, ListGroup, Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 import Rating from '../components/Rating';
+import { getError } from '../utils';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -39,7 +42,7 @@ function ProductScreen() {
         const result = await axios.get(`/api/products/slug/${slug}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch {
-        dispatch({ type: 'FETCH_FAIL', payload: error.message });
+        dispatch({ type: 'FETCH_FAIL', payload: getError(error) });
       }
     };
     fetchData();
@@ -47,9 +50,9 @@ function ProductScreen() {
   }, [slug]);
 
   return loading ? (
-    <div>loading......</div>
+    <LoadingBox />
   ) : error ? (
-    <div> {error} </div>
+    <MessageBox variant="danger"> {error} </MessageBox>
   ) : (
     <div>
       <Row>
@@ -69,10 +72,7 @@ function ProductScreen() {
               <h1> {product.name} </h1>
             </ListGroup.Item>
             <ListGroup.Item>
-              <Rating
-                Rating={product.rating}
-                numReview={product.numReviews}
-              ></Rating>
+              <Rating Rating={product.rating} numReview={product.numReviews} />
             </ListGroup.Item>
             <ListGroup.Item>Price : {product.price}</ListGroup.Item>
             <ListGroup.Item>
@@ -101,6 +101,7 @@ function ProductScreen() {
                   </Col>
                 </Row>
               </ListGroup.Item>
+
               {product.countInStock > 0 && (
                 <ListGroup.Item>
                   <div className="d-grid">
