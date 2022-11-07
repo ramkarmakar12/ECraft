@@ -1,6 +1,7 @@
 const data = {
   products: [
     {
+      _id: '1',
       name: 'Handmade lamp',
       slug: 'handmade-lamp',
       category: 'lamp',
@@ -14,6 +15,7 @@ const data = {
     },
 
     {
+      _id: '2',
       name: 'Handmade bag',
       slug: 'handmade-bag',
       category: 'bag',
@@ -27,6 +29,7 @@ const data = {
     },
 
     {
+      _id: '3',
       name: 'Handmade teacup',
       slug: 'handmade-teacup',
       category: 'kitchen',
@@ -40,6 +43,7 @@ const data = {
     },
 
     {
+      _id: '4',
       name: 'Homdecor',
       slug: 'handmade-decor',
       category: 'decoration',
