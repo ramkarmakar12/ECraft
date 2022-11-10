@@ -1,4 +1,20 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'Remo',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'Ram',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
       name: 'Handmade lamp',
@@ -50,6 +66,19 @@ const data = {
       rating: 4.5,
       numReviews: 12,
       description: 'High quality handbag',
+    },
+    {
+      //_id: '4',
+      name: 'Homdecor item',
+      slug: 'decor-set',
+      category: 'decoration',
+      image: '/images/homedecor.jpg',
+      price: '200',
+      countInStock: '10',
+      brand: 'local',
+      rating: 4.5,
+      numReviews: 1,
+      description: 'High quality decoration item',
     },
   ],
 };

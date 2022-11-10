@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import seedRouter from './routes/seedRoutes.js';
 import productRouter from './routes/ProductRoutes.js';
+import userRouter from './routes/UserRoutes.js';
 
 dotenv.config();
 
@@ -18,8 +19,16 @@ mongoose
 
 const app = Express();
 
+app.use(Express.json());
+app.use(Express.urlencoded({ extended: true }));
+
 app.use('/api/seed', seedRouter);
 app.use('/api/products', productRouter);
+app.use('/api/users', userRouter);
+
+app.use((err, req, res, next) => {
+  res.status(500).send({ message: err.message });
+});
 
 const port = process.env.PORT || 5000;
 
