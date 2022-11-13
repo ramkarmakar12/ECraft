@@ -13,7 +13,7 @@ body {
 main {
   flex: 1;
 }
-.btn-outline-primary 
+.btn-outline-primary,
 .btn-primary {
   background-color: #f0c040;
   color: black;
@@ -89,4 +89,8 @@ img {
 }
 .active-nav {
   left: 0;
+}
+
+.text-bold {
+  font-weight: bold;
 }
