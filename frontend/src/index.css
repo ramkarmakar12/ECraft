@@ -15,7 +15,7 @@ main {
 }
 .btn-outline-primary,
 .btn-primary {
-  background-color: #f0c040;
+  background-color: #5f9df7;
   color: black;
 }
 
@@ -44,7 +44,7 @@ img {
 }
 
 .rating span {
-  color: #ffc000;
+  color: #00d7ff;
 }
 
 .img-large {
@@ -65,8 +65,8 @@ img {
   color: #a0a0a0;
 }
 .checkout-steps > div.active {
-  border-bottom: 0.2rem solid #f08000;
-  color: #f08000;
+  border-bottom: 0.2rem solid #46c2cb;
+  color: #332fd0;
 }
 
 .navbar-brand {
@@ -136,4 +136,36 @@ img {
 }
 button.thumbnail {
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #203040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.brand a {
+  font-size: 3rem;
+}
+
+Navbar {
+  background-color: #2192ff;
+}
+
+.transparent-button {
+  background: none;
+  border: none;
+  color: #fff; /* Set the text color */
+  font-size: 16px;
+  cursor: pointer;
+  padding-top: 9px;
+  text-decoration: double;
+  opacity: 60%;
+  /* Additional styles as needed */
 }

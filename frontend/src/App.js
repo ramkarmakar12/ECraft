@@ -32,6 +32,9 @@ import OrderListScreen from './Screens/OrderListScreen';
 import UserListScreen from './Screens/UserListScreen';
 import UserEditScreen from './Screens/UserEditScreen';
 import MapScreen from './Screens/MapScreen';
+import NavbarButton from './components/NavbarButton';
+import SellerDashboard from './Screens/SellerDashboard';
+
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { fullBox, cart, userInfo } = state;
@@ -85,7 +88,7 @@ function App() {
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
-                <SearchBox />
+                <SearchBox className="me-auto  w-100  justify-content-middle" />
                 <Nav className="me-auto  w-100  justify-content-end">
                   <Link to="/cart" className="nav-link">
                     Cart
@@ -133,6 +136,9 @@ function App() {
                       </LinkContainer>
                     </NavDropdown>
                   )}
+                  <LinkContainer to="/seller-dashboard">
+                    <NavbarButton />
+                  </LinkContainer>
                 </Nav>
               </Navbar.Collapse>
             </Container>
@@ -157,6 +163,7 @@ function App() {
         <main>
           <Container className="mt-3">
             <Routes>
+              <Route path="/seller-dashboard" element={<SellerDashboard />} />
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/search" element={<SearchScreen />} />
@@ -255,7 +262,7 @@ function App() {
           </Container>
         </main>
         <footer>
-          <div className="text-center">All Rights Reserved© ECraft</div>
+          <div className="text-center">All Rights Reserved © ECraft</div>
         </footer>
       </div>
     </BrowserRouter>

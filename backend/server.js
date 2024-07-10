@@ -1,5 +1,6 @@
 import Express from 'express';
 import path from 'path';
+import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import seedRouter from './routes/seedRoutes.js';
@@ -39,6 +40,25 @@ app.use('/api/orders', orderRouter);
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
+});
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// Serve the static files
+//app.use(Express.static(path.join(__dirname, 'public')));
+
+// API endpoints
+let sellers = [];
+
+app.get('/api/sellers', (req, res) => {
+  res.json(sellers);
+});
+
+app.post('/api/sellers', (req, res) => {
+  const { name, product } = req.body;
+  const newSeller = { id: sellers.length + 1, name, product };
+  sellers.push(newSeller);
 });
 
 const port = process.env.PORT || 5000;
